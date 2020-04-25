@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hybest.org","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Endless loop">
+<meta property="og:url" content="https://hybest.org/">
+<meta property="og:site_name" content="Endless loop">
+<meta property="article:author" content="Hybest">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://hybest.org/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Endless loop</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Endless loop</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">With the flower blooming and withering, the moon full and waning.....</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/BIT-Hybest" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://hybest.org/2016/07/13/boost-Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hybest">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Endless loop">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/07/13/boost-Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">boost.Python学习笔记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-07-13 21:04:12" itemprop="dateCreated datePublished" datetime="2016-07-13T21:04:12+08:00">2016-07-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>这篇文章里介绍一下使用Python和C++混合编程的方法，主要包括两个方面<br>extending：在Python中调用C/C++代码<br>embedding：在C++代码中调用Python代码<br>本文的环境为<code>ubuntu14.04.4LTS g++4.8.4 python2.7</code></p>
+<h2 id="安装boost和python-dev"><a href="#安装boost和python-dev" class="headerlink" title="安装boost和python-dev"></a>安装boost和python-dev</h2><p>boost可以使用apt-get安装<br><code>sudo apt-get install libboost-all-dev</code><br>安装完成之后目录在<code>/usr/include/boost</code>下，且安装程序以及将boost的路径添加到了PATH中了<br>python-dev依然可以使用apt-get安装<br><code>sudo apt-get install python-dev</code></p>
+<h2 id="embedding在C-代码中调用Python代码"><a href="#embedding在C-代码中调用Python代码" class="headerlink" title="embedding在C++代码中调用Python代码"></a>embedding在C++代码中调用Python代码</h2><p>首先我们来一个最简单的栗子</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Python.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">    Py_Initialize();</span><br><span class="line">    PyRun_SimpleString(<span class="string">"from time import time,ctime\n"</span></span><br><span class="line">        <span class="string">"print 'Today is',ctime(time())\n"</span>);</span><br><span class="line">    Py_Finalize();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>假如这个文件名为test.cpp，我们使用以下命令编译它</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -I/usr/include/python2.7/ test.cpp -lpython2.7</span><br></pre></td></tr></table></figure>
+<p>将编译之后的程序运行，结果为</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Today is Wed Jul 13 22:20:34 2016</span><br></pre></td></tr></table></figure>
+
+<p>未完待续…</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://hybest.org/2016/01/01/%E5%86%99%E5%9C%A82016/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hybest">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Endless loop">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/01/01/%E5%86%99%E5%9C%A82016/" class="post-title-link" itemprop="url">写在2016</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-01-01 18:55:36" itemprop="dateCreated datePublished" datetime="2016-01-01T18:55:36+08:00">2016-01-01</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>这个地方好久都没更新过了，真的都要长草了。。</p>
+<p>新年就这么来了，没有一点点防备</p>
+<p>2015，打了最后一场regional，然而希望就像北京的蓝天，明明就在眼前，却又是那么遥远</p>
+<p>2015，找了一个intern job，尽管是一个奇怪的地方，却还是有很多收获</p>
+<p>2015，团里又来了一群新同学，整个架构也有了新的变化，嗯还行吧</p>
+<p>昨晚打了一小时乒乓球，和一个老大爷，好久没有这么舒畅过了，也许是新年就要到了吧</p>
+<p>新年愿望有好多啊，就不一一列举了～</p>
+<p>最后祝大家新年快乐！</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://hybest.org/2014/05/22/ICPC2014%E5%8C%97%E4%BA%AC%E9%82%80%E8%AF%B7%E8%B5%9B%E9%85%B1%E6%B2%B9%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hybest">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Endless loop">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/05/22/ICPC2014%E5%8C%97%E4%BA%AC%E9%82%80%E8%AF%B7%E8%B5%9B%E9%85%B1%E6%B2%B9%E8%AE%B0/" class="post-title-link" itemprop="url">ICPC2014北京邀请赛酱油记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2014-05-22 17:10:33" itemprop="dateCreated datePublished" datetime="2014-05-22T17:10:33+08:00">2014-05-22</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>第一次参加ICPC，真是有些激动呢，之前听闻有什么广州啊西安赛区什么的，想着还能趁机出去玩一番，结果被告知我们队参加北京赛区的QAQ，真是忧桑啊……</p>
+<p>比赛前几天，我们还在努力复习C++，那个面目和善然而挂科率超高的老师现在想着都还是害怕，周六上午，感人肺腑地把C++试卷答完，然后和啸神吃了午饭，一起去BNU热身，仝神因为下午有实验，所以热身去不了。一路上摆渡车、地铁、公交简直就是畅通无阻，短短一个半小时（跨省作战真不容易）我们便来到了这个神奇的学校BNU！</p>
+<p>恰逢初夏，妹纸们都穿得比较清凉，BNU的校园里，简直！百花齐放！看得我眼花缭乱！乱花渐欲迷人眼！</p>
+<p>走到敬文讲堂门口，开幕式已经开始了，我们便在门口刷了刷人人，顺便对BNU的妹纸一番评头论足……</p>
+<p>开幕式完了之后，晓巨巨来跟着我们队一起玩热身赛，顺便研究一下新的OJ进了机房，看到NowOrNever也在我们机房，有点激动啊，快要开始的时候，终于看到了WJMZBMR来了，还玩了一会自己的MBA，真是悠闲……拆开题目后，看到有一个RP题，啸神便写了然后去交，交了10来发，发现还是WA……A题24点，我看了看不知道咋写，便鼓动啸神上，啸神WA了几次便AC了，期间由于C题交的人太多，服务器跪了，然后C题就不见了，想着我们还没AC呢，就白白少了一个气球，真是桑心，过了一会，C is back！我直在研究那个算期望的，想来想去没什么思路，晓巨巨也说不知道咋搞，三人便一起玩了一会泥巴，晓巨巨给我们介绍了花泥的神奇原理，说了说选修课，就开开心心回河北良乡了……</p>
+<p>回到良乡，把坑爹之星的两道题交了，顺便看了前一天的舌尖，iMAC看片是舒服啊，十点钟便上床睡觉觉去了……</p>
+<p>周日早上六点起床（跨省作战真的伤不起），一行人跌跌撞撞赶到北京市里的BNU，已经快八点半了，和晓巨巨、波哥众谈笑风声一番，便进去准备比赛。拆开试题，没看到顺眼的题目，J是字符串，我看了看实在没想到咋搞，看到有人过了H，仝神跟我说了H题目大意，我比划了一番，觉得可写，然后便开始码H题，交了一发，发现WA了，便让啸神去写B，我继续想了一下H，发现有个特判应该是0，我改了一下然后AC了，真是开心啊！啸神的B题在改了一会之后也AC了，此时我们的rank应该在30+，想着拿银有戏啊！看到过E的很多，我和仝神觉得就搞E，肯定是矩阵快速幂这是没的说，然后就是找递推公式，然后搞啊搞，搞得天昏地暗，还是没搞出来，期间讨论了一下J，我想到了有一个错的如何搞，但是两个错的实在就想不出来了QAQ，然后继续搞E，啸神和仝神在搞A，就这样，名次一直往下掉，直到最后还是两个题……</p>
+<p>结束之后，晓巨巨说我们应该能有个铜，志愿者带着我们逛了逛美丽的BNU校园，翔哥请每个人吃了芒果冰淇淋，然后波哥给我们讲题，真是收获很多啊！</p>
+<p>然后参加闭幕式领了个奖就回河北良乡了……</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://hybest.org/2014/05/14/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hybest">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Endless loop">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/05/14/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2014-05-14 18:45:22" itemprop="dateCreated datePublished" datetime="2014-05-14T18:45:22+08:00">2014-05-14</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>终于有了自己的Blog，值得纪念！<br>开这个博客主要是用来写写解题报告，顺便无聊时候吐个槽什么的，当时我也不能预料到以后我还会发些什么无聊的东西上来。<br>感谢Linux/Apache/MySQL/php/WordPress，让我拥有一个属于自己的blog，刚好我的身份证上面的生日也是5.14，在今天架上这个blog算不算是巧合呢？</p>
+<hr>
+<p>以上是从之前的博客复活出来的Hello world<br>本来准备将以前使用的虚拟主机迁移到百度云上，却因为实名认证、备案什么的真的好麻烦，刚好发现在GitHub上使用Hexo可以很方便地部署静态网页，遂决定搬迁至此。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Hybest</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BIT-Hybest" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BIT-Hybest" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.instagram.com/hybest.bit/" title="Instagram → https:&#x2F;&#x2F;www.instagram.com&#x2F;hybest.bit&#x2F;" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hybest</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
