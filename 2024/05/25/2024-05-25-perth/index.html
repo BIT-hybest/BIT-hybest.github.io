@@ -19,27 +19,37 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"hybest.org","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="这篇文章里介绍一下使用Python和C++混合编程的方法，主要包括两个方面extending：在Python中调用C&#x2F;C++代码embedding：在C++代码中调用Python代码本文的环境为ubuntu14.04.4LTS g++4.8.4 python2.7 安装boost和python-devboost可以使用apt-get安装sudo apt-get install libbo">
+    <meta name="description" content="四月初从Perth回SG已经快一个月了，脑中仍然回荡着各种WA的记忆碎片 在这之前，我对于Perth的印象仅限于windsurfing以及来自@Julie的一些描述，觉得不过就是普通西方海边小城市罢了，便也从未将其放置在我的dest list上，直到这次被朋友怂恿，才让我第一次踏上大洋洲的土地。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="boost.Python学习笔记">
-<meta property="og:url" content="http://hybest.org/2016/07/13/2016-07-13-boost-Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="预期之外的Perth之行">
+<meta property="og:url" content="http://hybest.org/2024/05/25/2024-05-25-perth/index.html">
 <meta property="og:site_name" content="ENDLESS LOOP">
-<meta property="og:description" content="这篇文章里介绍一下使用Python和C++混合编程的方法，主要包括两个方面extending：在Python中调用C&#x2F;C++代码embedding：在C++代码中调用Python代码本文的环境为ubuntu14.04.4LTS g++4.8.4 python2.7 安装boost和python-devboost可以使用apt-get安装sudo apt-get install libbo">
+<meta property="og:description" content="四月初从Perth回SG已经快一个月了，脑中仍然回荡着各种WA的记忆碎片 在这之前，我对于Perth的印象仅限于windsurfing以及来自@Julie的一些描述，觉得不过就是普通西方海边小城市罢了，便也从未将其放置在我的dest list上，直到这次被朋友怂恿，才让我第一次踏上大洋洲的土地。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2016-07-13T13:04:12.000Z">
-<meta property="article:modified_time" content="2025-02-22T14:06:03.567Z">
+<meta property="og:image" content="https://img.hybest.org/2024-perth-01.jpg">
+<meta property="og:image" content="https://img.hybest.org/2024-perth-11.jpg">
+<meta property="og:image" content="https://img.hybest.org/2024-perth-02.jpg">
+<meta property="og:image" content="https://img.hybest.org/2024-perth-04.jpg">
+<meta property="og:image" content="https://img.hybest.org/2024-perth-05.jpg">
+<meta property="og:image" content="https://img.hybest.org/2024-perth-06.jpg">
+<meta property="og:image" content="https://img.hybest.org/2024-perth-07.jpg">
+<meta property="og:image" content="https://img.hybest.org/2024-perth-08.jpg">
+<meta property="og:image" content="https://img.hybest.org/2024-perth-13.jpg">
+<meta property="og:image" content="https://img.hybest.org/2024-perth-09.jpg">
+<meta property="article:published_time" content="2024-05-25T15:39:46.000Z">
+<meta property="article:modified_time" content="2025-02-25T15:50:41.616Z">
 <meta property="article:author" content="Hybest">
-<meta property="article:tag" content="boost">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.hybest.org/2024-perth-01.jpg">
 
 
-<link rel="canonical" href="http://hybest.org/2016/07/13/2016-07-13-boost-Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+<link rel="canonical" href="http://hybest.org/2024/05/25/2024-05-25-perth/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://hybest.org/2016/07/13/2016-07-13-boost-Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/","path":"2016/07/13/2016-07-13-boost-Python学习笔记/","title":"boost.Python学习笔记"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://hybest.org/2024/05/25/2024-05-25-perth/","path":"2024/05/25/2024-05-25-perth/","title":"预期之外的Perth之行"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>boost.Python学习笔记 | ENDLESS LOOP</title>
+<title>预期之外的Perth之行 | ENDLESS LOOP</title>
   
 
 
@@ -112,7 +122,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85boost%E5%92%8Cpython-dev"><span class="nav-number">1.</span> <span class="nav-text">安装boost和python-dev</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Embedding%E5%9C%A8C-%E4%BB%A3%E7%A0%81%E4%B8%AD%E8%B0%83%E7%94%A8Python%E4%BB%A3%E7%A0%81"><span class="nav-number">2.</span> <span class="nav-text">Embedding在C++代码中调用Python代码</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Day2%EF%B8%8F%E2%83%A3"><span class="nav-number">1.</span> <span class="nav-text">Day2️⃣</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day3%EF%B8%8F%E2%83%A3"><span class="nav-number">2.</span> <span class="nav-text">Day3️⃣</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day4%EF%B8%8F%E2%83%A3"><span class="nav-number">3.</span> <span class="nav-text">Day4️⃣</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day5%EF%B8%8F%E2%83%A3"><span class="nav-number">4.</span> <span class="nav-text">Day5️⃣</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day6%EF%B8%8F%E2%83%A3"><span class="nav-number">5.</span> <span class="nav-text">Day6️⃣</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -162,7 +172,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://hybest.org/2016/07/13/2016-07-13-boost-Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="http://hybest.org/2024/05/25/2024-05-25-perth/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -175,12 +185,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="boost.Python学习笔记 | ENDLESS LOOP">
+      <meta itemprop="name" content="预期之外的Perth之行 | ENDLESS LOOP">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          boost.Python学习笔记
+          预期之外的Perth之行
         </h1>
 
         <div class="post-meta-container">
@@ -191,7 +201,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2016-07-13 21:04:12" itemprop="dateCreated datePublished" datetime="2016-07-13T21:04:12+08:00">2016-07-13</time>
+      <time title="Created: 2024-05-25 23:39:46" itemprop="dateCreated datePublished" datetime="2024-05-25T23:39:46+08:00">2024-05-25</time>
     </span>
 
   
@@ -203,19 +213,36 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>这篇文章里介绍一下使用Python和C++混合编程的方法，主要包括两个方面<br>extending：在Python中调用C&#x2F;C++代码<br>embedding：在C++代码中调用Python代码<br>本文的环境为<code>ubuntu14.04.4LTS g++4.8.4 python2.7</code></p>
-<h2 id="安装boost和python-dev"><a href="#安装boost和python-dev" class="headerlink" title="安装boost和python-dev"></a>安装boost和python-dev</h2><p>boost可以使用apt-get安装<br><code>sudo apt-get install libboost-all-dev</code><br>安装完成之后目录在<code>/usr/include/boost</code>下，且安装程序以及将boost的路径添加到了PATH中了<br>python-dev依然可以使用apt-get安装<br><code>sudo apt-get install python-dev</code></p>
+    <div class="post-body" itemprop="articleBody"><p>四月初从Perth回SG已经快一个月了，脑中仍然回荡着各种WA的记忆碎片</p>
+<p>在这之前，我对于Perth的印象仅限于windsurfing以及来自@Julie的一些描述，觉得不过就是普通西方海边小城市罢了，便也从未将其放置在我的dest list上，直到这次被朋友怂恿，才让我第一次踏上大洋洲的土地。</p>
+<p><img src="https://img.hybest.org/2024-perth-01.jpg"></p>
 <span id="more"></span>
 
-<h2 id="Embedding在C-代码中调用Python代码"><a href="#Embedding在C-代码中调用Python代码" class="headerlink" title="Embedding在C++代码中调用Python代码"></a>Embedding在C++代码中调用Python代码</h2><p>首先我们来一个最简单的栗子</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;Python.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">    <span class="built_in">Py_Initialize</span>();</span><br><span class="line">    <span class="built_in">PyRun_SimpleString</span>(<span class="string">&quot;from time import time,ctime\n&quot;</span></span><br><span class="line">        <span class="string">&quot;print &#x27;Today is&#x27;,ctime(time())\n&quot;</span>);</span><br><span class="line">    <span class="built_in">Py_Finalize</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>假如这个文件名为test.cpp，我们使用以下命令编译它</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -I/usr/include/python2.7/ test.cpp -lpython2.7</span><br></pre></td></tr></table></figure>
-<p>将编译之后的程序运行，结果为</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Today is Wed Jul 13 22:20:34 2016</span><br></pre></td></tr></table></figure>
-
-<p>未完待续…</p>
+<p>然而就在我们抵达Perth不到24小时，已经将这里的工作机会，房价和移民政策全都研究了一遍，仿佛一个月后就要搬家过来这里定居了😃</p>
+<p>作为一个J人，我自然早早的就把每天的行程确定好了，比如第二天要去Rotternest。后来去的地方虽然和Rotternest毫无关系，但也都惊喜满满。</p>
+<p>限于篇幅，这里只列举一些些精彩瞬间</p>
+<h3 id="Day2️⃣"><a href="#Day2️⃣" class="headerlink" title="Day2️⃣"></a>Day2️⃣</h3><p>在Fremantle收获一张停车“罚单”🅿️</p>
+<p>Coles大买特买🥩（超好吃）</p>
+<p><img src="https://img.hybest.org/2024-perth-11.jpg"></p>
+<p>Swan river边上伴随着夕阳🌇和一家新加坡人讨论immi</p>
+<p><img src="https://img.hybest.org/2024-perth-02.jpg"></p>
+<h3 id="Day3️⃣"><a href="#Day3️⃣" class="headerlink" title="Day3️⃣"></a>Day3️⃣</h3><p>一杯接一杯，喝完这杯还有三杯🍷的winery<br>吹着风听Swan river游船上女船员的个人演唱会🎙️</p>
+<h3 id="Day4️⃣"><a href="#Day4️⃣" class="headerlink" title="Day4️⃣"></a>Day4️⃣</h3><p>在Lancelin白沙丘顶着烈日吃沙子☀️</p>
+<p><img src="https://img.hybest.org/2024-perth-04.jpg"></p>
+<p>Pinnacle石阵🏜️以前居然都是树🌲</p>
+<p><img src="https://img.hybest.org/2024-perth-05.jpg"></p>
+<p>在夜里戴着墨镜🕶️开车然后感叹怎么开了远光还这么暗</p>
+<h3 id="Day5️⃣"><a href="#Day5️⃣" class="headerlink" title="Day5️⃣"></a>Day5️⃣</h3><p>Geraldton的龙虾🦞好大好便宜，也好好吃</p>
+<p><img src="https://img.hybest.org/2024-perth-06.jpg"></p>
+<p>开的不是LC又想off-road的结局就是下车喂苍蝇</p>
+<p><img src="https://img.hybest.org/2024-perth-07.jpg"></p>
+<p>在Jurien Bay夜空的银河🌌下想起了君の知らない物語</p>
+<h3 id="Day6️⃣"><a href="#Day6️⃣" class="headerlink" title="Day6️⃣"></a>Day6️⃣</h3><p>好想在Jurien Bay玩一个月windsurfing🌊</p>
+<p><img src="https://img.hybest.org/2024-perth-08.jpg"></p>
+<p><img src="https://img.hybest.org/2024-perth-13.jpg"></p>
+<p>酷航的泡面🍜还挺划算</p>
+<p><img src="https://img.hybest.org/2024-perth-09.jpg"></p>
+<p>回到新加坡之后的我，仿佛像一只刚放风完的土狗，再次被关回笼子里，只能每天趁上班摸鱼之际，掰着指头盘算还有多少假期可以再去放风一下……</p>
 
     </div>
 
@@ -224,22 +251,16 @@
     
 
     <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/boost/" rel="tag"># boost</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2016/01/01/2016-01-01-%E5%86%99%E5%9C%A82016/" rel="prev" title="写在2016">
-                  <i class="fa fa-angle-left"></i> 写在2016
+                <a href="/2016/07/13/2016-07-13-boost-Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="prev" title="boost.Python学习笔记">
+                  <i class="fa fa-angle-left"></i> boost.Python学习笔记
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/05/25/2024-05-25-perth/" rel="next" title="预期之外的Perth之行">
-                  预期之外的Perth之行 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
